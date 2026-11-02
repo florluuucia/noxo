@@ -1,0 +1,179 @@
+
+(function () {
+  /* NOXO - Promo cascos "Renova tu casco con Nosotros" (02/11 al 08/11/2026, inclusive)
+     + texto de la barra de suscripcion (permanente). Contenedor de campanas GTM-M2P6RD38. */
+  if (window.NXPROMOCASCOS) return; window.NXPROMOCASCOS = 'v2';
+  var body = document.body; if (!body || /template-password|template-checkout/.test(body.className)) return;
+
+  /* 1) Barra en movimiento: nuevo texto del beneficio de suscripcion (no vence) */
+  var nb = 0, tb = setInterval(function () {
+    var sp = document.querySelectorAll('.nxmq-t span'), hecho = false;
+    for (var i = 0; i < sp.length; i++) if (/5% OFF en tu primera compra/.test(sp[i].innerHTML) && !/extra/.test(sp[i].innerHTML)) {
+      sp[i].innerHTML = '<b>\u00a1WE ARE OPEN!</b> \u00b7 \u00a15% OFF extra en tu primera compra suscribi\u00e9ndote!'; hecho = true; }
+    if (hecho || ++nb > 40) clearInterval(tb);
+  }, 250);
+
+  var FIN = new Date('2026-11-09T00:00:00-03:00').getTime();
+  if (Date.now() >= FIN) return;
+
+  var LIMA = '#C3E92E', LIMA_P = '#5C7A00', NEGRO = '#0B0C0D', BL = '#F2F2EF', EASE = 'cubic-bezier(.16,1,.3,1)';
+  var URL_PROMO = '/cascos/';
+  var FOTO_BANNER = 'https://dcdn-us.mitiendanube.com/stores/007/428/047/themes/rio/2-slide-1789133452095-7463984008-3918e04ddd17fec95504f586fbf80ba61789133455-1920-1920.webp';
+  var FOTO_POPUP = 'https://cdn.jsdelivr.net/gh/florluuucia/noxo@b3df6c0ff2462f182af69bca47b035e6f71c7ee6/assets/noxo_popup_cascos_ns9.jpg';
+  var LEGAL = '15% en cascos NOS y en el Blauer FF-01, 5% en cascos Blauer seleccionados, hasta el 08/11/2026. Combinable con 5% abonando por transferencia y 5% en tu primera compra suscribi\u00e9ndote.';
+  var CIRC = {"casco-blauer-pod-1gj1q":{"titanio/grismate":"7c8388:45|262a2b:35|b9bcbf:20","titanio/naranjamate":"8d9196:45|25282a:35|dd7346:20"},"casco-blauer-noah-nm-01-vq0u5":{"azul/grisbrillante":"36393e:50|c4c6cc:25|818f95:25","blanco/grisbrillante":"ccc9cb:45|2b2e32:35|585b5f:20","gris/negromate":"202427:55|5e6064:25|05090b:20"},"casco-blauer-hoah-nm-01-monocolor-ojs00":{negromate:"181b1f:100"},"casco-blauer-jj-01-ko5wx":{"blanco/rojobrillante":"d9d5d7:45|3a393c:30|d02a3a:25","titanio/azulmate":"3b3b3e:45|cdcdd1:30|6ea4be:25",
+"verde/amarillomate":"707162:45|26272a:25|b7b294:30"},"casco-blauer-jj-01-monocolor-1hkog":{amarillomate:"f4df65:100",blancobrillante:"d4d3d5:100",negromate:"030405:100"},"casco-blauer-ff-01-1dfov":{"azul/grismate":"3c434b:45|182026:30|526374:25","negro/amarillobrillante":"202124:55|b4b6bd:25|d9c75b:20","titanio/blancomate":"535151:40|726d6c:35|d3d2d5:25"},"casco-blauer-monocolor-6v5cm":{blancobrillante:"cfccca:100",negrobrillante:"202123:100"},"casco-blauer-demi-jet-dj-01-monocromo-1b2ol":{azulmate:"4a5a6a:100",
+blancomate:"d6d4d4:100",negromate:"333437:100",titaniomate:"656260:100",verdemate:"54564c:100"},"casco-blauer-bet-ht-urban-ca93g":{"blanco/amarillofluo":"282629:55|dbd8d9:20|c8d660:25"},"casco-blauer-bet-ht-monocromatico-8hgid":{blanco:"d4d3d5:100",grismate:"7e7e8b:100",negro:"38383c:100"},"casco-blauer-bet-ht-n2wdh":{"negro/amarillo":"0c0b0d:40|353233:40|b2b333:20","negro/antracite":"0a0a0b:45|312e32:40|837f80:15","negro/blanco":"353235:45|0b0a0c:40|d6d3d7:15"},"casco-blauer-80s-pn12g":{"blanco/naranjabrillante":"d5d4d2:55|211f1e:25|db7015:20",
+"titanio/naranjamate":"7b797c:40|1a191a:20|dd8617:25|a8473d:15","titanio/negromate":"484949:40|181819:35|6e706f:25"},"casco-pilot-1-1-1jiye":{"gris/negromate":"191919:35|dbdadb:40|797879:25","negro/blancomate":"1c1d1f:45|3d4044:40|d6dae0:15"},"casco-ns-14-rebatible-nos-xk96z":{monocolorblackmatt:"272628:100",nitroblueredmatt:"212123:65|4d92c6:20|920224:15",nitroitalymatt:"232224:50|677573:35|b42d3a:15",nitroyellowmatt:"232323:50|818286:30|caea38:20",monocolorsealgreymatt:"7b7c83:100",monocolorglossywhite:"cdc9c6:100"},"casco-ns-10-full-face-nos-1akdc":{furyred:"373535:60|f25753:25|f5f5f2:15",furyyellow:"292928:50|e5ec3a:35|e7e6e1:15",migfluoryellow:"6c6d6b:55|303335:30|cdf30d:15","migred/blue":"90908d:70|f37676:15|89caea:15",monocolorblackmatt:"38363f:100","sonicblue/redmatt":"262528:55|d75d5a:25|3484bf:20",sonicredmatt:"2f2e33:45|7d7d85:35|aa4548:20",monocolortitaniummatt:"7e7a7f:100",monocolorglossywhite:"e4e3e4:100"},"casco-ns-9-dual-sport-nos-1fbyv":{omegawhite:"cccbd0:60|4782af:25|bb646c:15",omegared:"4e5952:50|c25358:30|292a2e:20",
+mirageblack:"2a2833:60|f23c34:20|63aaf2:20",miragered:"25252a:55|db4f51:30|ffffff:15",monocolorblackmatt:"312f35:100",monocolorglossywhite:"ececee:100"}};
+  var enCascos = /^\/cascos\/?/.test(location.pathname);
+
+  function resta() { var s = Math.max(0, Math.floor((FIN - Date.now()) / 1000)); return { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 }; }
+  function p2(n) { return (n < 10 ? '0' : '') + n; }
+  function texto() { var r = resta(); return (r.d ? r.d + (r.d === 1 ? ' d\u00eda ' : ' d\u00edas ') : '') + p2(r.h) + ' h ' + p2(r.m) + ' min ' + p2(r.s) + ' s'; }
+  function track(ev) { try { (window.dataLayerTN || window.dataLayer || []).push({ event: ev }); } catch (e) {} }
+  function norm(a) { a = String(a || '').toLowerCase(); if (a.normalize) a = a.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); return a.replace(/\s+/g, ''); }
+  function fondo(def) { var k = def.split('|'), p = 0, r = []; if (k.length === 1) return '#' + k[0].split(':')[0];
+    for (var i = 0; i < k.length; i++) { var t = k[i].split(':'), c = p + parseFloat(t[1]); r.push('#' + t[0] + ' ' + p + '% ' + c + '%'); p = c; } return 'conic-gradient(' + r.join(',') + ')'; }
+
+  var css = '' +
+    '.nxbn{position:relative;display:block;height:100px;overflow:hidden;clip-path:inset(0);font-family:Outfit,sans-serif;color:' + BL + ';text-decoration:none}' +
+    '.nxbn-bg{position:fixed;inset:0;z-index:0;background:' + NEGRO + ' url(' + FOTO_BANNER + ') center 35%/cover no-repeat;filter:grayscale(1) brightness(.5) contrast(1.1);animation:nxdrift 16s cubic-bezier(.45,0,.55,1) infinite alternate}' +
+    '@keyframes nxdrift{from{transform:scale(1.03)}to{transform:scale(1) translateX(-8px)}}' +
+    '.nxbn-gl{position:absolute;inset:0;z-index:1;background:rgba(11,12,13,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}' +
+    '.nxbn-in{position:relative;z-index:2;height:100%;display:flex;align-items:stretch}' +
+    '.nxbn-in>div{display:flex;align-items:center;padding:0 32px;border-left:1px solid rgba(242,242,239,.16);white-space:nowrap}' +
+    '.nxbn-in>div:first-child{border-left:0;flex:1;padding-left:max(24px,calc((100vw - 1240px)/2))}' +
+    '.nxbn-in>div:last-child{padding-right:max(24px,calc((100vw - 1240px)/2))}' +
+    '.nxbn-t{font-size:34px;font-weight:400;letter-spacing:-.04em}' +
+    '.nxbn-t .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin:0 .24em -.08em 0}.nxbn-t .w:last-child{margin-right:0}' +
+    '.nxbn-t .w>i{font-style:normal;display:inline-block;transform:translateY(105%);opacity:0;filter:blur(4px);transition:transform 1000ms ' + EASE + ',opacity 700ms ' + EASE + ',filter 900ms ' + EASE + '}' +
+    '.nxbn.on .nxbn-t .w>i{transform:none;opacity:1;filter:none}.nxbn-t b{font-weight:400;color:' + LIMA + '}' +
+    '.nxbn .nxf{opacity:0;transform:translateY(6px);transition:opacity 800ms ' + EASE + ',transform 900ms ' + EASE + '}' +
+    '.nxbn.on .nxf{opacity:1;transform:none}.nxbn.on .nxf1{transition-delay:520ms}.nxbn.on .nxf2{transition-delay:640ms}.nxbn.on .nxf3{transition-delay:760ms}' +
+    '.nxbn-off b{background:' + LIMA + ';color:' + NEGRO + ';font-weight:500;font-size:20px;padding:6px 14px}' +
+    '.nxbn-cd{font-weight:300;font-size:17px;color:rgba(242,242,239,.78)}.nxbn-cd b{font-weight:400;color:' + BL + ';margin-left:8px;font-variant-numeric:tabular-nums}' +
+    '.nxbn-go b{background:' + LIMA + ';color:' + NEGRO + ';border-radius:100px;padding:12px 22px;font-weight:500;font-size:16px}' +
+    '@media (max-width:1100px){.nxbn-cd{display:none!important}}' +
+    '@media (max-width:767px){.nxbn-in{flex-wrap:wrap;align-content:center;justify-content:center}.nxbn-in>div{border:0!important;padding:2px 10px!important;flex:0 0 auto!important}.nxbn-t{font-size:23px}.nxbn-go{display:none!important}.nxbn-off b{font-size:15px;padding:4px 10px}}' +
+    '.nxpp{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(11,12,13,.55);font-family:Outfit,sans-serif;padding:16px;opacity:0;transition:opacity 500ms ' + EASE + '}.nxpp.on{opacity:1}' +
+    '.nxpp-c{position:relative;width:min(540px,100%);max-height:calc(100vh - 32px);overflow:auto;background:' + NEGRO + ' url(' + FOTO_POPUP + ') center 20%/cover;color:' + BL + ';transform:translateY(12px);transition:transform 900ms ' + EASE + '}.nxpp.on .nxpp-c{transform:none}' +
+    '.nxpp-c:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,13,0) 30%,rgba(11,12,13,.35))}' +
+    '.nxpp-b{position:relative;margin:230px 18px 18px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;background:rgba(11,12,13,.52);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(242,242,239,.12);border-radius:26px}' +
+    '.nxpp h3{font-weight:400;font-size:42px;line-height:.98;letter-spacing:-.045em;margin:0;color:' + BL + '}.nxpp h3 b{font-weight:400;color:' + LIMA + '}' +
+    '.nxpp-off{align-self:flex-start;background:' + LIMA + ';color:' + NEGRO + ';font-weight:500;font-size:22px;padding:4px 14px 6px}' +
+    '.nxpp-cd{font-weight:300;font-size:17px;color:rgba(242,242,239,.78)}.nxpp-cd b{font-weight:400;color:' + BL + ';font-variant-numeric:tabular-nums}' +
+    '.nxpp-go{align-self:flex-start;background:' + LIMA + ';color:' + NEGRO + '!important;border-radius:100px;padding:13px 24px;font-weight:500;font-size:16px;text-decoration:none}' +
+    '.nxpp-l{font-size:13px;line-height:1.4;color:rgba(242,242,239,.7);font-weight:300}' +
+    '.nxpp-x{position:absolute;z-index:2;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:0;cursor:pointer;font-size:22px;line-height:40px;color:' + BL + ';background:rgba(11,12,13,.52);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}' +
+    '@media (max-width:767px){.nxpp-b{margin-top:170px}.nxpp h3{font-size:34px}}' +
+    '.nxpc{font-family:Outfit,sans-serif;color:' + NEGRO + ';background:#fff;border-bottom:1px solid #E6E8E3;margin:0 0 28px}' +
+    '.nxpc-in{max-width:1240px;margin:0 auto;padding:44px 24px 34px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:flex-end;justify-content:space-between}' +
+    '.nxpc-pill{display:inline-flex;align-items:center;gap:8px;background:' + LIMA + ';color:' + NEGRO + ';border-radius:100px;padding:7px 14px;font-weight:500;font-size:13px;letter-spacing:.02em}.nxpc-pill i{width:6px;height:6px;border-radius:9px;background:' + NEGRO + '}' +
+    '.nxpc h2{font-weight:400;font-size:clamp(38px,5.4vw,72px);line-height:.98;letter-spacing:-.045em;margin:18px 0 0}.nxpc h2 b{font-weight:400;color:' + LIMA_P + '}' +
+    '.nxpc-off{display:inline-block;margin-top:18px;background:' + LIMA + ';padding:6px 16px 8px;font-size:clamp(24px,2.6vw,34px);font-weight:500;letter-spacing:-.03em}' +
+    '.nxpc-cdl{font-size:15px;color:#4B4F53;margin:0 0 10px}' +
+    '.nxpc-cd{display:flex;align-items:flex-start;gap:6px}.nxpc-cd div{min-width:64px;text-align:center}.nxpc-cd i{font-style:normal;font-weight:300;font-size:clamp(34px,4vw,52px);line-height:1;color:#8A9096}' +
+    '.nxpc-cd b{display:block;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.nxpc-cd span{font-size:13px;color:#4B4F53}' +
+    '.nxpc-tg{flex-basis:100%;display:flex;gap:10px;flex-wrap:wrap}' +
+    '.nxpc-tg button{font-family:inherit;font-size:15px;border-radius:100px;padding:10px 20px;cursor:pointer;border:1px solid ' + NEGRO + ';background:#fff;color:' + NEGRO + '}.nxpc-tg button[aria-pressed=true]{background:' + NEGRO + ';color:#fff}' +
+    '.nxpc-legal{flex-basis:100%;font-size:14px;line-height:1.45;color:#6B7075;font-weight:300;max-width:860px;margin:0}' +
+    '.nxpc-hide{display:none!important}' +
+    '.nxsw2{display:flex!important;gap:6px;flex-wrap:wrap;margin:8px 0 2px}.nxsw2 s{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(11,12,13,.16);display:block}.nxsw2 em{font-style:normal;font-size:12px;color:#6B7075;align-self:center}' +
+    '@media (max-width:767px){.nxpc-in{padding:28px 16px 24px;gap:22px}.nxpc-cd div{min-width:52px}}' +
+    '@media (prefers-reduced-motion:reduce){.nxbn-t .w>i,.nxbn .nxf,.nxpp,.nxpp-c{transition:none}.nxbn-bg{animation:none}}';
+  var st = document.createElement('style'); st.id = 'nxpromo-css'; st.textContent = css; document.head.appendChild(st);
+
+  /* 2) Banner bajo el encabezado, en todas las paginas */
+  function banner() {
+    var head = document.querySelector('.js-head-main');
+    if (!head) return false; if (document.querySelector('.nxbn')) return true;
+    var pal = ['\u00a1Renov\u00e1', 'tu', 'casco', 'con', '<b>Nos</b>otros!'], h = '';
+    for (var i = 0; i < pal.length; i++) h += '<span class="w"><i style="transition-delay:' + (i * 110) + 'ms">' + pal[i] + '</i></span>';
+    var bn = document.createElement('a'); bn.className = 'nxbn'; bn.href = URL_PROMO; bn.setAttribute('aria-label', 'Renov\u00e1 tu casco con nosotros: hasta 15% OFF. Ver cascos en oferta');
+    bn.innerHTML = '<div class="nxbn-bg"></div><div class="nxbn-gl"></div><div class="nxbn-in">' +
+      '<div class="nxbn-t">' + h + '</div><div class="nxbn-off nxf nxf1"><b>Hasta 15% OFF</b></div>' +
+      '<div class="nxbn-cd nxf nxf2">Termina en<b class="nxcd">' + texto() + '</b></div>' +
+      '<div class="nxbn-go nxf nxf3"><b>Ver cascos en oferta \u2192</b></div></div>';
+    head.parentNode.insertBefore(bn, head.nextElementSibling);
+    var ajusta = function () { if (window.pageYOffset > 0) return; bn.style.marginTop = '0px'; var d = head.getBoundingClientRect().bottom - bn.getBoundingClientRect().top; if (Math.abs(d) > 1) bn.style.marginTop = d + 'px'; };
+    setTimeout(ajusta, 60); setTimeout(ajusta, 900);
+    setTimeout(function () { bn.className += ' on'; }, 120);
+    bn.addEventListener('click', function () { track('nx_promo_cascos_banner'); });
+    return true;
+  }
+
+  /* 3) Popup: una vez por persona, fuera de /cascos/, nunca encima del popup de suscripcion */
+  function popup() {
+    var k = 'nx_promo_cascos_pop';
+    try { if (localStorage.getItem(k)) return; } catch (e) {}
+    if (document.querySelector('.nxpop')) return;
+    try { localStorage.setItem(k, '1'); } catch (e) {}
+    var pp = document.createElement('div'); pp.className = 'nxpp';
+    pp.innerHTML = '<div class="nxpp-c" role="dialog" aria-modal="true" aria-label="Promo cascos"><button type="button" class="nxpp-x" aria-label="Cerrar">\u00d7</button>' +
+      '<div class="nxpp-b"><h3>\u00a1Renov\u00e1 tu casco<br>con <b>Nos</b>otros!</h3><span class="nxpp-off">Hasta 15% OFF</span>' +
+      '<span class="nxpp-cd">Termina en <b class="nxcd">' + texto() + '</b></span>' +
+      '<a class="nxpp-go" href="' + URL_PROMO + '">Ver cascos en oferta \u2192</a><span class="nxpp-l">' + LEGAL + '</span></div></div>';
+    var cerrar = function () { pp.className = 'nxpp'; setTimeout(function () { if (pp.parentNode) pp.parentNode.removeChild(pp); }, 500); };
+    pp.addEventListener('click', function (e) { if (e.target === pp) cerrar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(); });
+    body.appendChild(pp); setTimeout(function () { pp.className = 'nxpp on'; }, 30);
+    pp.querySelector('.nxpp-x').onclick = cerrar;
+    pp.querySelector('.nxpp-go').onclick = function () { track('nx_promo_cascos_popup_click'); };
+    track('nx_promo_cascos_popup_vista');
+  }
+
+  /* 4) Pagina de cascos en oferta */
+  var soloOferta = true;
+  function num(el) { return el ? parseFloat(el.textContent.replace(/[^\d,]/g, '').replace(',', '.')) || 0 : 0; }
+  function circulos() {
+    var items = document.querySelectorAll('.js-item-product');
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i]; if (it.querySelector('.nxsw2')) continue;
+      var a = it.querySelector('a[href*="/productos/"]'), slug = a ? (a.pathname.split('/productos/')[1] || '').replace(/\/$/, '') : '';
+      var defs = CIRC[slug]; if (!defs) continue;
+      var vd = it.querySelector('[data-variants]'), names = [];
+      try { var v = JSON.parse(vd.getAttribute('data-variants')); for (var k = 0; k < v.length; k++) if (names.indexOf(v[k].option0) < 0) names.push(v[k].option0); } catch (er) {}
+      var sw = document.createElement('div'), n = 0; sw.className = 'nxsw2'; sw.setAttribute('aria-hidden', 'true');
+      for (var j = 0; j < names.length; j++) { var def = defs[norm(names[j])]; if (!def) continue; if (n < 6) { var s = document.createElement('s'); s.title = names[j]; s.style.background = fondo(def); sw.appendChild(s); } n++; }
+      if (!n) continue;
+      if (n > 6) { var m = document.createElement('em'); m.textContent = '+' + (n - 6); sw.appendChild(m); }
+      var nm = it.querySelector('.js-item-name'); if (nm && nm.parentNode) nm.parentNode.insertBefore(sw, nm.nextSibling);
+    }
+  }
+  function filtra() {
+    circulos();
+    var items = document.querySelectorAll('.js-item-product');
+    for (var i = 0; i < items.length; i++) { var it = items[i], c = num(it.querySelector('.js-compare-price-display')), p = num(it.querySelector('.js-price-display'));
+      if (soloOferta && !(c > p && p > 0)) it.classList.add('nxpc-hide'); else it.classList.remove('nxpc-hide'); }
+  }
+  function cabecera() {
+    var items = document.querySelectorAll('.js-item-product'); if (!items.length) return false;
+    if (document.querySelector('.nxpc')) return true;
+    var grid = items[0].parentNode, host = (grid.closest && grid.closest('.js-product-table')) || grid;
+    var box = document.createElement('section'); box.className = 'nxpc';
+    box.innerHTML = '<div class="nxpc-in"><div><span class="nxpc-pill"><i></i>PROMO CASCOS \u00b7 HASTA EL 08/11</span>' +
+      '<h2>\u00a1Renov\u00e1 tu casco<br>con <b>Nos</b>otros!</h2><span class="nxpc-off">Hasta 15% OFF</span></div>' +
+      '<div><p class="nxpc-cdl">Termina en</p><div class="nxpc-cd"><div><b data-u="d">0</b><span>d\u00edas</span></div><i>:</i>' +
+      '<div><b data-u="h">00</b><span>horas</span></div><i>:</i><div><b data-u="m">00</b><span>minutos</span></div><i>:</i><div><b data-u="s">00</b><span>segundos</span></div></div></div>' +
+      '<div class="nxpc-tg"><button type="button" data-o="1" aria-pressed="true">Cascos en oferta</button><button type="button" data-o="0" aria-pressed="false">Todos los cascos</button></div>' +
+      '<p class="nxpc-legal">' + LEGAL + '</p></div>';
+    host.parentNode.insertBefore(box, host);
+    var bs = box.querySelectorAll('.nxpc-tg button');
+    for (var b = 0; b < bs.length; b++) bs[b].onclick = function () { soloOferta = this.getAttribute('data-o') === '1'; for (var j = 0; j < bs.length; j++) bs[j].setAttribute('aria-pressed', bs[j] === this ? 'true' : 'false'); filtra(); };
+    filtra();
+    if (window.MutationObserver) new MutationObserver(filtra).observe(grid, { childList: true });
+    return true;
+  }
+
+  function reloj() {
+    if (Date.now() >= FIN) { var q = document.querySelectorAll('.nxbn,.nxpp,.nxpc'); for (var i = 0; i < q.length; i++) q[i].parentNode.removeChild(q[i]); return; }
+    var t = texto(), c = document.querySelectorAll('.nxcd'); for (var j = 0; j < c.length; j++) c[j].textContent = t;
+    var r = resta(), u = document.querySelectorAll('.nxpc-cd b'); for (var k = 0; k < u.length; k++) { var x = u[k].getAttribute('data-u'); u[k].textContent = x === 'd' ? r.d : p2(r[x]); }
+  }
+
+  var n = 0, t = setInterval(function () {
+    var ok = banner(); if (enCascos) ok = cabecera() && ok;
+    if (ok || ++n > 40) { clearInterval(t); if (!enCascos) setTimeout(popup, 3500); reloj(); setInterval(reloj, 1000); }
+  }, 250);
+})();
